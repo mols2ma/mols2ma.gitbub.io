@@ -1,0 +1,2 @@
+TurnTable.mov filter=lfs diff=lfs merge=lfs -text
+doggydebris/recording.mov filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,147 @@
+<html>
+<head>
+  <title>Doggy Debris</title>
+
+</script>
+  <style>body {
+  width: 970px; /* 700 + 250 + 10 */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#text {
+  display: inline-block;
+  width: 700px;
+  margin: 0;
+  padding: 0;
+}
+
+#image {
+  display: inline-block;
+  width: 1920px;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+}
+
+a > p {
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+  <script src="marked.min.js" type="text/javascript"></script>
+</head>
+
+<body style="font-family:'Verdana'" bgcolor="#7B9EA8">
+
+   <div class="navbar-nav">
+      <a class="nav-item nav-link px-2" href="/projects.html">Click here to go back to Monica's website!</a>
+      <p><br></p>
+   </div>
+
+  <video autoplay muted loop controls width="960" height="540" controls>
+    <source src="recording.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h1 id="monica-andres-msandres-471-final-project"><center>Doggy Debris</center></h1>
+
+  <div class="row">
+  <div class="column" style="">
+    <h2 id="goal">Goal</h2>
+    <p>To create a game in the first-person point of view.</p>
+
+    <h2 id="brief-description">Description</h2>
+    <p>Doogy debris is an interactive game where the user takes on the perspective of a dog on a surfboard. The user then moves around the ocean using the WASD keys and two finger scrolling to collect water bottles where one bottle equals one point. There will always be 5 bottles present in the water.</p>
+
+    <h2 id="lessons-that-i-recall-">Lessons I've Learned</h2>
+    <ul>
+    <li>It is difficult to have an object rotate 360 degrees using arccos.</li>
+    <li>Creating realistic water is difficult using only a texture map and lighting</li>
+    <li>Textures must be a power of two in size.</li>
+    <li>Order of transformation is extremely important.</li>
+    </ul>
+
+    <h2 id="technologies-learned">Key Graphics Technologies</h2>
+    <ul>
+    <li>I created a 7x7 grid on the x & z-axis of the ocean. In each grid I calculated the average y-height of each vertex. So when the dog is on a certain grid in the ocean, the dog's height will change to that average y-height. This is so the dog can be seen at all time and is not under the water obj.</li>
+    <li>Collision detection between a point and AABB</li>
+    <li>Generating 5 water bottles randomly in the world at all times</li>
+    <li>Having the camera follow the dog at all time including when it rotates</li>
+    <ul>
+      <li>I utilized arccos to find the angle between an initial view vector and the current view vector. I then used that angle to rotate the dog about the y-axis of the camera.</li>
+    </ul>
+    </ul>
+
+    <h2 id="technologies-learned">External Resources</h2>
+    <ul>
+    <li>All models were downloaded royalty-free from online sources such as <a href="http://www.turbosquid.com/">turbosquid</a>.</li>
+    <li>This <a href="https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection">site</a> helped me understand collision detection.</li>
+    </ul>
+
+    <h2 id="knowledge-deepened">Knowledge Deepened</h2>
+    <ul>
+    <li>Hierarchical modeling<ul>
+    <li>Displayed in the sun</li>
+    <li>Having the user follow the dog on a surfboard required this</li>
+    </ul>
+    </li>
+    <li>Lighting<ul>
+    <li>Used a point light to brighten the entire world</li>
+    <li>Used another point light that the sun uses to illuminate the area that the sun is above</li>
+    </ul>
+    </li>
+    <li>Texture Mapping<ul>
+    <li>Mapping images to objects (dog, ocean, skybox)</li>
+    </ul>
+    </li>
+    </li>
+    <li>Shading<ul>
+    <li>The sun, textured objects, and surfboard all have different shading by manipulating diffusion, specular, and ambience values</li>
+    </ul>
+    </li>
+  </div>
+  <div class="column" style="">
+
+      <iframe src="https://giphy.com/embed/Uqw7clAMLwYn6ZwdbT" width="340" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>Score displays on console.</p>
+
+      <iframe src="https://giphy.com/embed/UQ0snZRdyuqdKXdtpH" width="340" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>Dog's height changes based on grid location.</p>
+
+      <img width="340" height="271" src="cat.jpg" alt="Italian Trulli">
+      <p>Dog with cat best friend.</p>
+      <img width="340" height="271" src="dog1.jpg" alt="Italian Trulli">
+      <p>Dog with dog best friend.</p>
+      <img width="340" height="271" src="dog2.jpg" alt="Italian Trulli">
+      <p>Dog with dog best friend #2.</p>
+  </div>
+</div>
+
+
+</body>
+
+</html>

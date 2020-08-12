@@ -8,10 +8,17 @@ p, li {
    font-family: "Roboto Condensed";
 }
 
+.main {
+  margin-top: 90px; /* Add a top margin to avoid content overlay */
+}
+
 .navbar {
    font-family: "alteroregular";
    font-size: 28px;
    background-color: #e3f2fd;
+   position: fixed; /* Set the navbar to fixed position */
+   top: 0; /* Position the navbar at the top of the page */
+   width: 100%; /* Full width */
 }
 
 .navbar-brand {
